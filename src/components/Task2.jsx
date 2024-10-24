@@ -32,10 +32,10 @@ const Task2 = () => {
     <div className="min-h-screen bg-gradient-to-b from-blue-500 to-indigo-800 text-white">
       <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">Interactive Card Display</h2>
 
-     <div className='flex flex-wrap justify-center gap-10'>
+     <div className='flex flex-wrap justify-center gap-12'>
      {cards.map((card,index) =>(
-      <div onClick={() => handleClick(index)}  className='h-64 w-64 bg-white rounded-lg shadow-lg hover:bottom-4 hover:top-4 hover:bg-slate-200 hover:cursor-pointer hover:border-cyan-400' key={index}> 
-       <div className='text-slate-700 text-center flex-grow'>
+      <div onClick={() => handleClick(index)}  className='h-64 w-64 bg-white rounded-lg shadow-lg hover:scale-110 duration-300 hover:bg-slate-200 hover:cursor-pointer hover:border-cyan-400' key={index}> 
+       <div className='text-slate-700 text-center flex-grow flex flex-col'>
         <h3 className='text-2xl font-bold text-slate-600 mb-4'>{card.title}</h3>
         {activeCard === index && <p className='font-semibold'> {card.content} </p>}
        </div>
